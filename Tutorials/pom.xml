@@ -7,6 +7,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Tutorials Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <issues-product>APP</issues-product>
+      <issues-component>MY_APP</issues-component>
+   </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -32,11 +37,11 @@
     <plugin>
                                 <artifactId>maven-compiler-plugin</artifactId>
                                 <configuration>
-                                        <source>1.5</source>
-                                        <target>1.5</target>
+                                        <source>1.6</source>
+                                        <target>1.6</target>
                                 </configuration>
                         </plugin>
-            
+                       
             <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tomcat-maven-plugin</artifactId>
@@ -47,6 +52,7 @@
 					<path>/mywebapp</path>
 				</configuration>
 			</plugin>
+			
     </plugins>
   </build>
 </project>

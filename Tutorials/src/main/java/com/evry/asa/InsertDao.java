@@ -1,6 +1,5 @@
 package com.evry.asa;
 import java.sql.Connection;
-import java.sql.ResultSet;
 public class InsertDao {
 	private String employeeName;
 	private String employeeAddRess;
