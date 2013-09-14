@@ -9,9 +9,11 @@
   <url>http://maven.apache.org</url>
   <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <issues-product>APP</issues-product>
-      <issues-component>MY_APP</issues-component>
+      <spring.version>3.0.5.RELEASE</spring.version>
+	  <slf4j.version>1.6.4</slf4j.version>
+	  <cxf.version>2.4.1</cxf.version>
    </properties>
+   
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -30,22 +32,98 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
+		
+<dependency>
+<groupId>org.apache.cxf</groupId>
+<artifactId>cxf-rt-core</artifactId>
+<version>2.4.2</version>
+</dependency>
+<dependency>
+<groupId>org.apache.cxf</groupId>
+<artifactId>cxf-rt-frontend-simple</artifactId>
+<version>2.2.2</version>
+</dependency>
+<dependency>
+<groupId>org.apache.cxf</groupId>
+<artifactId>cxf-rt-frontend-jaxws</artifactId>
+<version>2.1.4</version>
+</dependency>
+
+<dependency>
+<groupId>org.apache.cxf</groupId>
+<artifactId>cxf-rt-transports-local</artifactId>
+<version>2.0.8</version>
+</dependency>
+<dependency>
+<groupId>org.apache.cxf</groupId>
+<artifactId>cxf-rt-transports-http</artifactId>
+<version>2.1.3</version>
+</dependency>
+
+
+
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-beans</artifactId>
+		<version>2.5.6</version>
+		</dependency>
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>3.2.4.RELEASE</version>
+		</dependency>
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>3.0.5.RELEASE</version>
+		</dependency>
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>2.5.6.SEC02</version>
+		</dependency>
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>2.5.6.SEC01</version>
+		</dependency>
+		<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-expression</artifactId>
+		<version>3.2.4.RELEASE</version>
+		</dependency>
+		<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-beans</artifactId>
+	<version>3.0.2.RELEASE</version>
+</dependency>
+		<dependency>
+		
+<groupId>org.slf4j</groupId>
+<artifactId>slf4j-log4j12</artifactId>
+<version>1.6.1</version>
+<type>jar</type>
+<scope>compile</scope>
+</dependency>
+ 
+		
   </dependencies>
   <build>
     <finalName>Tutorials</finalName>
     <plugins>
     <plugin>
-                                <artifactId>maven-compiler-plugin</artifactId>
-                                <configuration>
-                                        <source>1.6</source>
-                                        <target>1.6</target>
-                                </configuration>
-                        </plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.3.2</version>
+              <configuration>
+              <source>1.5</source>
+              <target>1.5</target>
+              </configuration>
+    </plugin>
                        
             <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tomcat-maven-plugin</artifactId>
-				
+				<version>1.0-SNAPSHOT</version>
 				<configuration>
 					<url>http://localhost:9080//manager</url>
 					<server>TomcatServer</server>
